@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case "$(printf 'Cancel\nExit\nSuspend\nHibernate\nReboot\nShutdown\n' | fuzzel -d)" in
+	Exit)
+		swaymsg exit
+		;;
+	Suspend)
+		systemctl suspend
+		;;
+	Hibernate)
+		systemctl hibernate
+		;;
+	Reboot)
+		systemctl reboot
+		;;
+	Shutdown)
+		systemctl poweroff
+esac

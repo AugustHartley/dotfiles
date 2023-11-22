@@ -7,10 +7,6 @@ precmd() {
 	printf '\e]7;file://%s\e\\' "$PWD"
 }
 
-if [[ "$TERM" == "xterm-kitty" ]]; then
-	alias clear="TERM=xterm clear"
-fi
-
 alias ls='ls --color=auto'
 alias ip='ip -color=auto'
 alias diff='diff --color=auto'

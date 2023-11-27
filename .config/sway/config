@@ -15,7 +15,6 @@ default_border pixel 0
 exec gammastep
 exec mako
 exec foot -s
-exec waybar
 
 client.focused           #000000cf #000000cf #ffffff
 client.focused_inactive  #000000cf #000000cf #ffffff
@@ -141,5 +140,18 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+bar {
+	position top
+
+	status_command i3status
+
+	colors {
+		statusline #dddddd
+		background #000000
+		focused_workspace #333333 #333333 #dddddd
+		inactive_workspace #000000 #000000 #dddddd
+	}
+}
 
 include /etc/sway/config.d/*

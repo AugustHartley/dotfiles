@@ -32,9 +32,8 @@ for_window [app_id="^blender$"] floating enable; border normal 8; resize set 960
 output * bg ~/wallpaper.jpg fill #000000
 output * scale_filter linear
 
-input '1:1:AT_Translated_Set_2_keyboard' {
-	xkb_model 'chromebook'
-}
+input * xkb_layout us
+# input * xkb_variant intl
 
 input '1267:179:Elan_Touchpad' natural_scroll enabled
 
@@ -117,7 +116,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle; [con_id=__focused__ floating] border normal 8; [con_id=__focused__ tiling] border none
+bindsym $mod+Shift+space floating toggle; [con_id=__focused__ floating] border normal 4; [con_id=__focused__ tiling] border none
 # bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+s sticky toggle
 # bindsym $mod+space focus mode_toggle
